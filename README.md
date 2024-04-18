@@ -20,3 +20,8 @@ SOURCE:
 2. If prompted to replace, press ok (or if you want, copy and paste the contents of source/psychlua into source/psychlua
 3. build game
 4. same as build ver
+
+CREDIT:
+
+ShadowMario and psych team - Base code
+Astro - additional LUA functions
