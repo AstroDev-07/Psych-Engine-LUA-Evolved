@@ -219,10 +219,35 @@ class LuaUtils
 	}
 
 	public static function showErrorWindow(message:String, errTitle:String = "An error has occured.") {
-		PlayState.instance.vocals.stop();
-		PlayState.instance.opponentVocals.stop();
-		FlxG.sound.music.stop();
 		lime.app.Application.current.window.alert(message, errTitle);
+	}
+
+	public static function pauseAudio(vocals:Bool = null, oppVocals:Bool = null, music:Bool = null):Void {
+		if (vocals == null) vocals = true;
+		if (oppVocals == null) oppVocals = true;
+		if (music == null) music = true;
+	
+		if (vocals) {
+			if (PlayState.instance.vocals.playing) {
+				PlayState.instance.vocals.pause();
+			} else {
+				PlayState.instance.vocals.resume();
+			}
+		}
+		if (oppVocals) {
+			if (PlayState.instance.opponentVocals.playing) {
+				PlayState.instance.opponentVocals.pause();
+			} else {
+				PlayState.instance.opponentVocals.resume();
+			}
+		}
+		if (music) {
+			if (FlxG.sound.music.playing) {
+				FlxG.sound.music.pause();
+			} else {
+				FlxG.sound.music.resume();
+			}
+		}
 	}
 	
 	public static function isMap(variable:Dynamic)

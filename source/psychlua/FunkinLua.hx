@@ -1463,6 +1463,8 @@ class FunkinLua {
 
 		Lua_helper.add_callback(lua, "showErrorWindow", LuaUtils.showErrorWindow);
 
+		Lua_helper.add_callback(lua, "pauseAudio", LuaUtils.pauseAudio);
+
 		#if FLX_PITCH
 		Lua_helper.add_callback(lua, "getSoundPitch", function(tag:String) {
 			if(tag != null && tag.length > 0 && game.modchartSounds.exists(tag)) {
