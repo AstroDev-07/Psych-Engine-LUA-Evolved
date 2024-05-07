@@ -190,6 +190,8 @@ class LuaUtils
 		return null;
 	}
 
+	public static function 
+
 	public static function printd(text:String):Void {
 		trace(text);
 	}

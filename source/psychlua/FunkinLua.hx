@@ -783,12 +783,19 @@ class FunkinLua {
 		});
 		Lua_helper.add_callback(lua, "precacheImage", function(name:String, ?allowGPU:Bool = true) {
 			Paths.image(name, allowGPU);
+			trace('Image Cached');
 		});
 		Lua_helper.add_callback(lua, "precacheSound", function(name:String) {
 			Paths.sound(name);
+			trace('Sound Cached');
 		});
 		Lua_helper.add_callback(lua, "precacheMusic", function(name:String) {
 			Paths.music(name);
+			trace('Music Cached');
+		});
+		Lua_helper.add_callback(lua, "precacheVideo", function(name:String) {
+			Paths.video(name);
+			trace('Video Cached');
 		});
 
 		// others
