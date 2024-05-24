@@ -1470,7 +1470,11 @@ class FunkinLua {
 
 		Lua_helper.add_callback(lua, "showErrorWindow", LuaUtils.showErrorWindow);
 
-		Lua_helper.add_callback(lua, "pauseAudio", LuaUtils.pauseAudio);
+		Lua_helper.add_callback(lua, "pauseAudio", LuaUtils.pauseAudio);\
+
+		Lua_helper.add_callback(lua, "deleteFile", LuaUtils.deleteFile);
+
+		Lua_helper.add_callback(lua, "openPage", LuaUtils.openPage);
 
 		#if FLX_PITCH
 		Lua_helper.add_callback(lua, "getSoundPitch", function(tag:String) {

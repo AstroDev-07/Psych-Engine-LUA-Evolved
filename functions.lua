@@ -12,3 +12,7 @@ showErrorWindow('message','title') -- opens a error message with a custom title 
 pauseAudio(vocals, oppVocals, music) -- takes a boolean to pause the audio, eg true, true, false (pause vocals, oppVocals and keep music playing)
 
 preCacheVideo('video') -- allows you to precache a video/cutscene so it doesn't lag when played
+
+deleteFile('path') -- allows you to delete a file from the specified path
+
+openPage('yourwebsite') -- allows you to open a website, Requires you to add https:// at the beginning

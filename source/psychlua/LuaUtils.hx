@@ -190,7 +190,17 @@ class LuaUtils
 		return null;
 	}
 
-	public static function 
+	public static function deleteFile(path:String):Void {
+		FileSystem.deleteFile(path);
+	}
+
+	public static function openPage(url:String):Void {
+		#if linux
+		Sys.command('/usr/bin/xdg-open', [url]);
+		#else
+		FlxG.openURL(url);
+		#end
+	}
 
 	public static function printd(text:String):Void {
 		trace(text);
